@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    padding: 30px;
+    color: rgb(118, 117, 117);
+    font-size: 25px;
+}
+span{
+    color: #2685fa;
+}
+
+.sidebar-toggle {
+    float: right;
+    border: none;
+    font-size: 20px;
+    margin: 20px;
+    color: rgb(7, 78, 161);
+    background: none;
+}
+
+.sidebar-toggle:hover {
+    color: rgb(10, 111, 206);
+}
+
+.close-btn {
+    border: none;
+    color: rgb(229, 52, 52);
+    font-size: 25px;
+    padding-left: 60px;
+    background: none;
+}
+.close-btn:hover{
+    color: red;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(53, 199, 204);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+
+.show-sidebar {
+    transform: translateX(0);
+}
+
+.links a {
+    display: block;
+    padding: 15px 40px;
+    color: #060606;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.links a:hover {
+    background: rgba(60, 129, 248, 0.1);
+}
+a:hover{
+    color: #2685fa;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.social-icons li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #534f4f;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #0073e6;
+}
+
+@media screen and (min-width: 676px) {
+    .sidebar {
+        width: 400px;
+    }
+}
